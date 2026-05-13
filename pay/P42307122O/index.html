@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Clube dos Magnatas</title>
+    <link rel="icon" href="https://i.ibb.co/0vvLy9b/favicon-V2.png" type="image/x-icon">
+    
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            user-select: none; 
+        }
+        html, body { 
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            background: #f4f4f4;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            text-align: center;
+        }
+        .logo { max-width: 200px; margin-bottom: 20px; pointer-events: none; }
+        .loader-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #ff4000;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+            margin: auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+            word-wrap: break-word;
+        }
+        @media (min-width: 768px) {
+            .message { font-size: 18px; }
+            .loader { width: 60px; height: 60px; }
+            .logo { max-width: 250px; }
+        }
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            display: none;
+        }
+    </style>
+    <script>
+        setTimeout(function(){
+            document.querySelector('.loader-container').style.display='none';
+            document.querySelector('.logo').style.display='none';
+            document.querySelector('iframe').style.display='block';
+        }, 2000);
+    </script>
+</head>
+<body oncontextmenu="return false;" onkeydown="return false;" ondragstart="return false;">
+    <img src="https://clube.magnata.com.br/lp/assets/logo-web.png" alt="Clube dos Magnatas" class="logo" >
+    <div class="loader-container">
+        <div class="loader"></div>
+        <div class="message">Carregando sua vaga<br>vaga de número 7</div>
+    </div>
+    
+    <iframe src="https://checkout.vegacheckout1.shop/VCCL1O8SD1VL"></iframe>
+
+    <script>
+        (function() {
+            document.oncontextmenu = function() { return false; };
+            document.onkeydown = function(e) {
+                if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c' || e.key === 'p')) { return false; }
+            };
+            document.addEventListener('keydown', function(e) {
+                if (e.keyCode === 123) { e.preventDefault(); }
+            });
+        })();
+    </script>
+</body>
+</html>
